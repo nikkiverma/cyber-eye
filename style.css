@@ -1,0 +1,289 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100px;
+}
+
+.name {
+    display: flex;
+    background-color: rgb(82, 99, 225);
+    align-items: center;
+    position: relative;
+    top: 0px;
+    height: 50px;
+}
+
+.name ul {
+    display: flex;
+}
+
+.name li {
+    list-style: none;
+    margin-top: 20px;
+    margin-left: 5px;
+    color: rgb(241, 240, 240);
+}
+
+.images img {
+    height: 100px;
+    weight: 100px;
+    margin-top: 20px;
+
+}
+.imgtext img{
+    margin-left: -10px;
+}
+
+.img2 {
+    margin-left: 50px;
+}
+
+.imgtext {
+    width: 500px;
+    margin-left: 40px;
+}
+
+.images {
+    display: flex;
+}
+
+
+
+#navbar {
+    display: flex;
+    background-color: rgb(82, 99, 225);
+    align-items: center;
+    position: relative;
+    top: 5px;
+    height: 50px;
+}
+
+#navbar ul {
+    display: flex;
+}
+
+#navbar li {
+    list-style: none;
+
+}
+
+#navbar li a {
+    padding: 0px 15px;
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+    display: block;
+    margin-top: 20px;
+    position: sticky;
+}
+
+#navbar li a:hover {
+    background-color: white;
+    border-radius: 5px;
+    color: black;
+}
+
+#navbar img {
+    height: 58px;
+    width: 100px;
+    /* margin-top: 10px; */
+}
+
+.dropdown {
+
+    position: absolute;
+    display: inline-block;
+    right: 50px;
+    top: 30px;
+
+}
+
+.dropdown-button {
+    color: #fff;
+    padding: 0px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-item {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: #333;
+}
+
+.dropdown-item:hover {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content li {
+    padding: 0px 15px;
+    text-decoration: none;
+    font-size: 1rem;
+    color: black;
+    /* display: inline; */
+    top: 0px;
+    cursor: pointer;
+    list-style: none;
+}
+
+.dropdown li:hover {
+    background-color: rgb(82, 99, 225);
+    border-radius: 5px;
+    color: black;
+}
+
+
+
+
+
+.search-container {
+    /* transform: translate(5%, 0%); */
+    text-align: center;
+    margin-top: -200px;
+}
+
+.search-input {
+    padding: 10px;
+    width: 500px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-button {
+    padding: 10px 20px;
+    background-color: rgb(82, 99, 225);
+    ;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+}
+
+.search-area img {
+    width: 100%;
+    height: 350px;
+    /* filter: blur(10px); */
+    /* opacity:0.5 ; */
+
+}
+
+/* .search-area{
+    background: url(social2.jpeg) no-repeat; 
+    width: 100%;
+    height: 200px;
+
+} */
+
+#list {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    /* margin-top: 200px; */
+
+}
+
+.box img {
+    height: 70px;
+    width: 70px;
+
+
+}
+
+.box {
+    /* font-family: 'Edu QLD Beginner', cursive; */
+    border-radius: 13px;
+    margin: 25px 10px;
+    padding: 20px;
+    border: 3px solid rgb(82, 99, 225);
+    background-color: rgb(212, 211, 211);
+}
+
+.box:hover{
+    box-shadow: 10px 10px 10px 10px;
+   
+}
+
+h1 {
+    text-align: center;
+    color: rgb(10, 10, 10);
+    margin-top: 200px;
+}
+.box h3 a{
+    text-decoration: none;
+    color: black;
+}
+.box h3 a:hover{
+    color:rgb(82, 99, 225);
+    width: 50px;
+
+}
+
+#premium {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    /* margin-top: 200px; */
+
+}
+
+.premium h1{
+    margin-top: 50px;
+}
+ .box h3{
+    color: red;
+    font-weight: bolder;
+    font-size: 30px;
+}
+.box h1{
+    font-size: 40px;
+}
+.box li{
+    list-style:lower-roman;
+}
+
+.btn{
+    width: 100px;
+    height: 30px;
+    margin-top: 30px;
+    background-color: #3498db;
+    border: 2px solid #3498db ;
+    border-radius: 5px;
+}
+.btn:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+#btn1{
+    margin-top: 120px;
+}
+#btn2{
+    margin-top: 100px;
+}
