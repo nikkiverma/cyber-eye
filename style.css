@@ -41,7 +41,7 @@ body {
 }
 
 .img2 {
-    margin-left: 50px;
+    margin-left: 300px;
 }
 
 .imgtext {
@@ -124,7 +124,7 @@ body {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-    color: #333;
+    color: #333333;
 }
 
 .dropdown-item:hover {
@@ -145,6 +145,10 @@ body {
     top: 0px;
     cursor: pointer;
     list-style: none;
+}
+.dropdown-content li a{
+    text-decoration: none;
+    color: black;
 }
 
 .dropdown li:hover {
@@ -185,6 +189,31 @@ body {
     border: 2px solid black;
     color: black;
 }
+.popup{
+    width: 400px;
+    height: 200px;
+    background: #fff;
+    border: 3px solid rgb(82, 99, 225);
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin-top: 350px;
+    visibility: hidden;
+}
+.open-popup{
+    visibility: visible;
+}
+.popup span{
+    color: red;
+    font-size: 20px;
+}
+#error{
+    width: 70px;
+    height: 70px;
+}
 
 .search-area img {
     width: 100%;
@@ -192,6 +221,12 @@ body {
     /* filter: blur(10px); */
     /* opacity:0.5 ; */
 
+}
+.search-area p{
+    font-size: 50px;
+    font-weight: bolder;
+    margin-top: 10px;
+    
 }
 
 /* .search-area{
@@ -208,6 +243,158 @@ body {
     /* margin-top: 200px; */
 
 }
+.listinsta{
+    width: 500px;
+    height: 450px;
+    background: #fff;
+    border: 3px solid #3498db;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin-top: 850px;
+    visibility: hidden;
+    /* justify-content: center; */
+}
+.open-listinsta{
+    visibility: visible;
+}
+.listinsta span{
+    color: red;
+    font-size: 20px;
+}
+.listinsta table{
+    border: 2px solid black;
+    width: 400px;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+table tr td{
+    font-size: 20px;
+}
+.head td{
+    font-weight: bold;
+}
+
+.listfb{
+    width: 500px;
+    height: 450px;
+    background: #fff;
+    border: 3px solid #3498db;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin-top: 850px;
+    visibility: hidden;
+    /* justify-content: center; */
+}
+.open-listfb{
+    visibility: visible;
+}
+.listfb span{
+    color: red;
+    font-size: 20px;
+}
+.listfb table{
+    border: 2px solid black;
+    width: 400px;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+table tr td{
+    font-size: 20px;
+}
+.head td{
+    font-weight: bold;
+}
+
+.listtwt{
+    width: 500px;
+    height: 450px;
+    background: #fff;
+    border: 3px solid #3498db;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin-top: 850px;
+    visibility: hidden;
+    /* justify-content: center; */
+}
+.open-listtwt{
+    visibility: visible;
+}
+.listtwt span{
+    color: red;
+    font-size: 20px;
+}
+.listtwt table{
+    border: 2px solid black;
+    width: 400px;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+table tr td{
+    font-size: 20px;
+}
+.head td{
+    font-weight: bold;
+}
+
+
+.listln{
+    width: 500px;
+    height: 450px;
+    background: #fff;
+    border: 3px solid #3498db;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin-top: 850px;
+    visibility: hidden;
+    /* justify-content: center; */
+}
+.open-listln{
+    visibility: visible;
+}
+.listln span{
+    color: red;
+    font-size: 20px;
+}
+.listln table{
+    border: 2px solid black;
+    width: 400px;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+table tr td{
+    font-size: 20px;
+}
+.head td{
+    font-weight: bold;
+}
+.search{
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 3px;
+}
+
 
 .box img {
     height: 70px;
@@ -222,7 +409,7 @@ body {
     margin: 25px 10px;
     padding: 20px;
     border: 3px solid rgb(82, 99, 225);
-    background-color: rgb(212, 211, 211);
+    background-color: rgb(172, 196, 235);
 }
 
 .box:hover{
@@ -235,11 +422,12 @@ h1 {
     color: rgb(10, 10, 10);
     margin-top: 200px;
 }
-.box h3 a{
-    text-decoration: none;
+.box h2 {
+    /* text-decoration: none; */
     color: black;
+    cursor: pointer;
 }
-.box h3 a:hover{
+.box h2 :hover{
     color:rgb(82, 99, 225);
     width: 50px;
 
