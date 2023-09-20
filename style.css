@@ -215,6 +215,11 @@ body {
     height: 70px;
 }
 
+   
+.open-reportpopup{
+    visibility: visible;
+}
+
 .search-area img {
     width: 100%;
     height: 350px;
@@ -397,8 +402,9 @@ table tr td{
 
 
 .box img {
-    height: 70px;
-    width: 70px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
 
 
 }
