@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CyberEye</title>
+    <style>
+        .reportpopup{
+    width: 400px;
+    height: 200px;
+    background: #fff;
+    border: 3px solid rgb(82, 99, 225);
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin-top: 350px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center; 
+     /* visibility: hidden; */
+}
+
+#reporturl-input{
+    width: 300px;
+    border: 3px solid black;
+    margin-left: 50px;
+}
+
+#reporterror{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 150px;
+    width: 70px;
+    height: 70px;
+}
+
+#reportbtn{
+    margin-left: 150px;
+}
+.btn a{
+    text-decoration: none;
+    color: black;
+}
+    </style>
+</head>
+
+<body>
+    <div class="name">
+        <ul>
+            <li> Government of Bharat</li>
+            <li>|</li>
+            <li> Government of Gujarat</li>
+        </ul>
+    </div>
+
+
+    <!-- lang dropdown -->
+    <div class="dropdown">
+        <span class="dropdown-button">Language</span>
+        <div class="dropdown-content">
+            <li><a href="hindi.html">Hindi</a></li>
+            <li><a href="index.html">English</a></li>
+            <li><a href="gujrati.html">Gujrati</a></li>
+            <li><a href="marathi.html">Marathi</a></li>
+            <li><a href="bengali.html">Bengali</a></li>
+            <li><a href="telgu.html">Telgu</a></li>
+            <li><a href="panjabi.html">Panjabi</a></li>
+            <li><a href="malyalam.html">Malyalam</a></li>
+
+            <!-- <div id="google_element"></div>
+            <script src="http://translate.google.com/translate.a/element.js?cd=loadGoogleTranslate">
+            </script>
+            <script> 
+            function loadGoogleTranslate(){
+                new google.translate.TranslateElement("google_element")
+            }
+            </script> -->
+        </div>
+    </div>
+
+
+    <!-- logoes -->
+    <div class="images">
+
+        <div class="img1">
+            <img src="img/emblem.png" alt="national emblem">
+        </div>
+
+        <div class="imgtext">
+            <img src="img/logon.jpg" alt="national portal to detect fake socialmedia account">
+        </div>
+
+        <div class="img2">
+            <img src="img/logo-azadi75.png" alt="Azadi ka amrit mahotsav">
+        </div>
+
+        <div class="img3">
+            <img src="img/g20-logo.png" alt="G20">
+        </div>
+
+    </div>
+
+
+    <!-- navbar -->
+    <nav id="navbar">
+        <ul>
+            <img src="img/CYBER EYE.png" alt="logo">
+            <li class="item"> <a href="index.html">Home</a> </li>
+            <li class="item"> <a href="#list">List</a> </li>
+            <li class="item"> <a href="#list">Search</a> </li>
+            <li class="item"> <a href="#">Add</a> </li>
+            <li class="item"> <a href="#premium">Premium</a> </li>
+            <li class="item" > <a onclick="reportpopup()" href="">Report</a> </li>
+            <li class="item"> <a href="#contact">Helpline Numbers</a> </li>
+            <li class="item"> <a href="signup.html">Investigation Agencies</a> </li>
+        </ul>
+    </nav>
+
+
+    <!-- search area -->
+    <div class="search-area">
+        <img src="img/socailBg.webp" alt="image">
+        <div class="search-container">
+            <input type="text" class="search-input" id="url-input" placeholder="Provide URL">
+            <button class="search-button" id="search-btn" onclick="checkURL()">Search</button>
+            <p id="msg"> </p>
+        </div>
+    </div>
+
+
+    <!-- search popup -->
+    <div class="popup" id="popup">
+        <img id="error" src="process-error-symbolic.svg" alt="">
+        <h3 id="perMsg"></h3>
+        <span>This is randomly generated value just for demo!!</span>
+        <button class="btn" id="okbtn">Report</button>
+    </div>
+
+    <!-- report popup -->
+    <div class="reportpopup" id="reportpopup">
+        <img id="reporterror" src="process-error-symbolic.svg" alt="">
+        <!-- <h3 id="perMsg"></h3> -->
+        <input type="text" class="search-input" id="reporturl-input" placeholder="Provide URL">
+        <!-- <span>This is randomly generated value just for demo!!</span> -->
+        <button class="btn" id="reportbtn"><a href="index.html">Report</a></button>
+    </div>
+
+
+    <!-- list area -->
+    <section class="list">
+
+        <h1 class="h-primary"> <a name="services"></a>List of Fake Accounts</h1>
+        <div id="list">
+
+            <div class="box">
+                <img src="img/instagram.png" alt="instagram">
+                <!-- <h3><a onclick="instalist()" href="">See list</a></h3> -->
+                <h2 onclick="instalist()">See list</h2>
+            </div>
+
+            <div class="box">
+                <img src="img/facebook.png" alt="Facebook">
+                <!-- <h3><a href="">See list</a></h3> -->
+                <h2 onclick="fblist()">See list</h2>
+            </div>
+
+            <div class="box">
+                <img src="img/twitter.png" alt="">
+                <!-- <h3><a href="">See list</a></h3> -->
+                <h2 onclick="twtlist()">See list</h2>
+            </div>
+
+            <div class="box">
+                <img src="img/linkedin.png" alt="">
+                <!-- <h3><a href="">See list</a></h3> -->
+                <h2 onclick="lnlist()">See list</h2>
+            </div>
+
+            <div class="box">
+                <img src="img/other.jpg" alt="">
+                <!-- <h3><a href="">See list</a></h3> -->
+                <h2 onclick="lnlist()">See list</h2>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- insta list box -->
+
+    <div class="listinsta" id="listinsta">
+        <span>This is just a demo data!!!</span>
+        <h2>List of fake Instagram accounts</h2>
+        <input type="text" class="search" placeholder="Search">
+        <button class="search-button" id="searchlist">Search</button>
+        <table>
+            <tr class="head">
+                <td>S.no</td>
+                <td>Username name</td>
+                <td>Percentage</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>sharpen26</td>
+                <td>82%</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>zaferalakol4</td>
+                <td>47.7%</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>hidopa48</td>
+                <td>87%</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>selmangny999</td>
+                <td>97.7%</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>daddyyaga62</td>
+                <td>56.98%</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>25@325</td>
+                <td>99.7%</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>dreams98765</td>
+                <td>67%</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Crimean888</td>
+                <td>75.9%</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>csrt4zaman</td>
+                <td>81.3%</td>                
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>beykral@951</td>
+                <td>77%</td>
+            </tr>
+
+        </table>
+        <button class="btn" id="okbtn" onclick="Ilistclose()">OK</button>
+
+    </div>
+
+    <!-- fackebook list box -->
+    <div class="listfb" id="listfb">
+        <span>This is just a demo data!!!</span>
+        <h2>List of fake Facebook accounts</h2>
+        <input type="text" class="search" placeholder="Search">
+        <button class="search-button" id="searchlist">Search</button>
+        <table>
+            <tr class="head">
+                <td>S.no</td>
+                <td>Username name</td>
+                <td>Percentage</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>sharpen26</td>
+                <td>82%</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>zaferalakol4</td>
+                <td>47.7%</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>hidopa48</td>
+                <td>87%</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>selmangny999</td>
+                <td>97.7%</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>daddyyaga62</td>
+                <td>56.98%</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>25@325</td>
+                <td>99.7%</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>dreams98765</td>
+                <td>67%</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Crimean888</td>
+                <td>75.9%</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>csrt4zaman</td>
+                <td>81.3%</td>                
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>beykral@951</td>
+                <td>77%</td>
+            </tr>
+        </table>
+        <button class="btn" id="okbtn" onclick="flistclose()">OK</button>
+
+    </div>
+
+    <!-- twitter list box -->
+    <div class="listtwt" id="listtwt">
+        <span>This is just a demo data!!!</span>
+        <h2>List of fake Twitter accounts</h2>
+        <input type="text" class="search" placeholder="Search">
+        <button class="search-button" id="searchlist">Search</button>
+        <table>
+            <tr class="head">
+                <td>S.no</td>
+                <td>Username name</td>
+                <td>Percentage</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>sharpen26</td>
+                <td>82%</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>zaferalakol4</td>
+                <td>47.7%</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>hidopa48</td>
+                <td>87%</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>selmangny999</td>
+                <td>97.7%</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>daddyyaga62</td>
+                <td>56.98%</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>25@325</td>
+                <td>99.7%</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>dreams98765</td>
+                <td>67%</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Crimean888</td>
+                <td>75.9%</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>csrt4zaman</td>
+                <td>81.3%</td>                
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>beykral@951</td>
+                <td>77%</td>
+            </tr>
+        </table>
+        <button class="btn" id="okbtn" onclick="tlistclose()">OK</button>
+
+    </div>
+
+
+    <!-- linkedin list box -->
+    <div class="listln" id="listln">
+        <span>This is just a demo data!!!</span>
+        <h2>List of fake linkedin accounts</h2>
+        <input type="text" class="search" placeholder="Search">
+        <button class="search-button" id="searchlist">Search</button>
+        <table>
+            <tr class="head">
+                <td>S.no</td>
+                <td>Username name</td>
+                <td>Percentage</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>sharpen26</td>
+                <td>82%</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>zaferalakol4</td>
+                <td>47.7%</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>hidopa48</td>
+                <td>87%</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>selmangny999</td>
+                <td>97.7%</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>daddyyaga62</td>
+                <td>56.98%</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>25@325</td>
+                <td>99.7%</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>dreams98765</td>
+                <td>67%</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Crimean888</td>
+                <td>75.9%</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>csrt4zaman</td>
+                <td>81.3%</td>                
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>beykral@951</td>
+                <td>77%</td>
+            </tr>
+        </table>
+        <button class="btn" id="okbtn" onclick="llistclose()">OK</button>
+
+    </div>
+
+    <!-- premium section -->
+    <section class="premium">
+        <h1 class="h-primary"> <a name="services"></a>Premium Plans</h1>
+        <div id="premium">
+            <div class="box">
+                <h3>Free</h3>
+                <h1>Basic Plan</h1>
+                <h2>Features:</h2>
+                <ul>
+                    <li>Can Search for any connection</li>
+                    <li>Alert on fake connection</li>
+                    <li>Search for an account</li>
+                </ul>
+                <button class=" btn" id="btn1"> Buy Now</button>
+            </div>
+
+
+            <div class="box">
+                <h3>Rs. 100/month</h3>
+                <h1>Standard Plan</h1>
+                <h2>Features:</h2>
+                <ul>
+                    <li>Can Search for any connection</li>
+                    <li>Alert on fake connection</li>
+                    <li>Search for an account</li>
+                    <li>Add fake accounts</li>
+                </ul>
+                <button class=" btn" id="btn2"> Buy Now</button>
+
+
+            </div>
+            <div class="box">
+                <h3>Rs. 150/month</h3>
+                <h1>Gold Plan</h1>
+                <h2>Features:</h2>
+                <ul>
+                    <li>Can Search for any connection</li>
+                    <li>Alert on fake connection</li>
+                    <li>Search for an account</li>
+                    <li>Add fake accounts</li>
+                    <li> Receive a notification if someone <br> uses personal information (photo, <br> phone number,
+                        email) in their <br> profile </li>
+                </ul>
+                <button class=" btn"> Buy Now</button>
+
+            </div>
+            <div class="box">
+                <h3>Rs. 200/month</h3>
+                <h1>Platinum Plan</h1>
+                <h2>Features:</h2>
+
+                <ul>
+                    <li>Can Search for any connection</li>
+                    <li>Alert on fake connection</li>
+                    <li>Search for an account</li>
+                    <li>Add fake accounts</li>
+                    <li>Receive a notification if someone <br> uses personal information (photo, <br> phone number,
+                        email) in their <br> profile </li>
+                </ul>
+                <button class=" btn"> Buy Now</button>
+            </div>
+
+
+        </div>
+    </section>
+
+
+    <!-- contact area -->
+    <section class="contact">
+        <h1>Contact</h1>
+
+        <div class="container">
+            <h2>Helpline Numbers</h2>
+            <div class="boxes">
+                <p></p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Javascript -->
+    <script>
+        // searchpopup
+        function checkURL() {
+
+            var inputField = document.getElementById("url-input");
+            var inputValue = inputField.value;
+            var urlPattern = /^(http(s)?:\/\/)?([\w-]+(\.[\w-]+)+\/?)?(:\d+)?(\/\S*)?$/;
+            var resultMessage = document.getElementById("msg");
+            var randomVal = Math.random() * (100 - 1) + 1;
+            var fakemsg = document.getElementById("perMsg");
+
+            if (inputValue === "") {
+                // alert("Please Provide a URL!");
+                resultMessage.textContent = "Provide URL";
+                resultMessage.style.color = "red";
+            }
+            else if (!urlPattern.test(inputValue)) {
+                // alert("Please Provide a  valid URL!");
+                resultMessage.textContent = "Invalid URL";
+                resultMessage.style.color = "red";
+
+            } else {
+                fakemsg.textContent = "This account is "+randomVal+ " fake!";
+
+                popup.classList.add("open-popup");
+            }
+        }
+        document.getElementById("okbtn").addEventListener("click", function () {
+
+            popup.classList.remove("open-popup");
+            alert("Your Report is submitted sucessfully!");
+        });
+        document.getElementById("reportbtn").addEventListener("click", function () {
+
+            // popup.classList.remove("open-popup");
+            alert("Your Report is submitted sucessfully!");
+        });
+
+        // insta
+        function instalist() {
+            listinsta.classList.add("open-listinsta");
+        }
+        function Ilistclose() {
+            listinsta.classList.remove("open-listinsta");
+
+        }
+
+        // fb
+        function fblist() {
+            listfb.classList.add("open-listfb");
+        }
+        function flistclose() {
+            listfb.classList.remove("open-listfb");
+
+        }
+
+        // twt
+        function twtlist() {
+            listtwt.classList.add("open-listtwt");
+        }
+        function tlistclose() {
+            listtwt.classList.remove("open-listtwt");
+
+        }
+
+
+        // linkedlist
+        function lnlist() {
+            listln.classList.add("open-listln");
+        }
+        function llistclose() {
+            listln.classList.remove("open-listln");
+
+        }
+
+       function reportpopup(){
+        reportpopup.classList.add("open-reportpopup");
+        }
+    </script>
+
+
+</body>
+
+
+</html>
