@@ -74,7 +74,9 @@
             <li class="item"> <a href="#list">Search</a> </li>
             <li class="item"> <a href="#">Add</a> </li>
             <li class="item"> <a href="#premium">Premium</a> </li>
+            <li class="item" > <a onclick="reportpopup()" href="report.html">Report</a> </li>
             <li class="item"> <a href="#contact">Helpline Numbers</a> </li>
+            <li class="item"> <a href="signup.html">Investigation Agencies</a> </li>
         </ul>
     </nav>
 
@@ -95,8 +97,17 @@
         <img id="error" src="process-error-symbolic.svg" alt="">
         <h3 id="perMsg"></h3>
         <span>This is randomly generated value just for demo!!</span>
-        <button class="btn" id="okbtn">OK</button>
+        <button class="btn" id="okbtn">Report</button>
     </div>
+
+    <!-- report popup -->
+    <!-- <div class="reportpopup" id="reportpopup">
+        <img id="error" src="process-error-symbolic.svg" alt="">
+        <h3 id="perMsg"></h3>
+        <input type="text" class="search-input" id="reporturl-input" placeholder="Provide URL">
+        <span>This is randomly generated value just for demo!!</span>
+        <button class="btn" id="okbtn">Report</button>
+    </div> -->
 
 
     <!-- list area -->
@@ -128,13 +139,19 @@
                 <!-- <h3><a href="">See list</a></h3> -->
                 <h2 onclick="lnlist()">See list</h2>
             </div>
+
+            <div class="box">
+                <img src="img/other.jpg" alt="">
+                <!-- <h3><a href="">See list</a></h3> -->
+                <h2 onclick="lnlist()">See list</h2>
+            </div>
         </div>
     </section>
 
 
     <!-- insta list box -->
 
-  <div class="listinsta" id="listinsta">
+    <div class="listinsta" id="listinsta">
         <span>This is just a demo data!!!</span>
         <h2>List of fake Instagram accounts</h2>
         <input type="text" class="search" placeholder="Search">
@@ -523,6 +540,7 @@
         document.getElementById("okbtn").addEventListener("click", function () {
 
             popup.classList.remove("open-popup");
+            alert("Your Report is submitted sucessfully!");
         });
 
         // insta
@@ -553,13 +571,17 @@
         }
 
 
-        // twt
+        // linkedlist
         function lnlist() {
             listln.classList.add("open-listln");
         }
         function llistclose() {
             listln.classList.remove("open-listln");
 
+        }
+
+       function reportpopup(){
+        reportpopup.classList.add("open-reportpopup");
         }
     </script>
 
