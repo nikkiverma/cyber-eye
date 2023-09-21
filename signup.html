@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Investigation Agency Signup</title>
+
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Investigation Agency Signup</h1>
+        <form id="signup-form">
+            <div class="form-group">
+                <label for="agency-name">Agency Name:</label>
+                <input type="text" id="agency-name" name="agency-name" required>
+            </div>
+            <!-- Add other form fields here -->
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+            <!-- <div class="form-group">
+                <label for="security-question">Security Question:</label>
+                <select id="security-question" name="security-question" required>
+                    <option value="question1">Question 1</option>
+                    <option value="question2">Question 2</option>
+                  Add more security questions 
+                </select>
+            </div> 
+            <div class="form-group">
+                <label for="security-answer">Answer:</label>
+                <input type="text" id="security-answer" name="security-answer" required>
+            </div> -->
+            <div class="form-group">
+                <input type="checkbox" id="terms" name="terms" required>
+                <a href="terms.txt">Terms and Conditions</a>
+                <label for="terms">I have read and agree to the Terms and Conditions</label>
+            </div>
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('signup-form').addEventListener('submit', function(event) {
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('confirm-password').value;
+
+    if (password !== confirmPassword) {
+        alert('Passwords do not match');
+        event.preventDefault();
+    }
+});
+
+    </script>
+</body>
+</html>
